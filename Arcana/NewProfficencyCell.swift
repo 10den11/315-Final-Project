@@ -14,6 +14,8 @@ class NewProfficencyCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var valueField: UITextField!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var skill: Skill? = nil
     
     
@@ -28,6 +30,14 @@ class NewProfficencyCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func saveSkill(){
+        do {
+            try context.save() // like a git commit
+        }
+        catch {
+            print("Error saving skill")
+        }
+    }
 
     @IBAction func updateSkill(_ sender: Any) {
         if let skill = skill{
@@ -36,6 +46,7 @@ class NewProfficencyCell: UITableViewCell {
             } else {
                 update(skill: skill)
             }
+            saveSkill()
         }
         
     }
@@ -44,6 +55,7 @@ class NewProfficencyCell: UITableViewCell {
         nameLabel.text = skill.name
         valueField.text = "\(skill.value)"
         self.skill = skill
+        saveSkill()
     }
     
 

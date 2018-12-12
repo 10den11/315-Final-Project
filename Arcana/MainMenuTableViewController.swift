@@ -72,7 +72,7 @@ class MainMenuTableViewController: UIViewController, UITableViewDataSource, UITa
             print("Error loading trips \(error)")
         }
         self.characterTableView.reloadData()
-
+        
     }
     
     func saveContext(){
