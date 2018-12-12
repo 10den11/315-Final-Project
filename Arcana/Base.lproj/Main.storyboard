@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zoo-f0-GzR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" id="oXm-yr-54u" customClass="MainMenuTableViewCell" customModule="Arcana" customModuleProvider="target">
@@ -83,11 +83,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Character Selection" id="T5W-aa-CZX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="r9g-z0-gBl">
-                            <connections>
-                                <action selector="editBarPressed:" destination="BYZ-38-t0r" id="Mhw-m1-3sg"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="r9g-z0-gBl"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KN5-I2-HvT">
                             <connections>
                                 <segue destination="KhP-mT-7TL" kind="show" identifier="AddSegue" id="wlC-bh-XiM"/>
@@ -111,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-9q-1cV">
-                                <rect key="frame" x="16" y="80" width="343" height="250"/>
+                                <rect key="frame" x="16" y="36" width="343" height="250"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Char #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qX-5e-01D">
                                         <rect key="frame" x="0.0" y="0.0" width="51.5" height="20.5"/>
@@ -196,7 +192,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fJk-oV-NZk">
-                                <rect key="frame" x="0.0" y="335" width="375" height="332"/>
+                                <rect key="frame" x="0.0" y="291" width="375" height="376"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfficencyCell" rowHeight="35" id="zhu-sN-cO8" customClass="ProfficencyCell" customModule="Arcana" customModuleProvider="target">
@@ -262,29 +258,48 @@
             </objects>
             <point key="canvasLocation" x="1973.5999999999999" y="-55.322338830584712"/>
         </scene>
-        <!--Roll View Controller-->
+        <!--Roll Scene Controller-->
         <scene sceneID="52H-Ue-s5D">
             <objects>
-                <viewController id="DYz-Th-ca7" customClass="RollViewController" customModule="Arcana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DYz-Th-ca7" customClass="RollSceneController" customModule="Arcana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GsB-9y-CEz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vo-g1-TYG">
-                                <rect key="frame" x="60" y="115" width="240" height="128"/>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kud-Qn-oa9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </skView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPE-2z-NGi">
+                                <rect key="frame" x="172" y="530" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSY-3X-7yL">
-                                <rect key="frame" x="166" y="317" width="42" height="21"/>
+                                <state key="normal" title="Roll">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollDieButtonPressed:" destination="DYz-Th-ca7" eventType="touchUpInside" id="KHq-JT-AD4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENq-ha-Duc">
+                                <rect key="frame" x="166" y="472" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kud-Qn-oa9" firstAttribute="top" secondItem="LlZ-es-udG" secondAttribute="top" id="FPP-AZ-mZr"/>
+                            <constraint firstItem="LlZ-es-udG" firstAttribute="bottom" secondItem="Kud-Qn-oa9" secondAttribute="bottom" id="Pzb-0v-7C6"/>
+                            <constraint firstItem="Kud-Qn-oa9" firstAttribute="leading" secondItem="LlZ-es-udG" secondAttribute="leading" id="QeS-cz-59n"/>
+                            <constraint firstItem="LlZ-es-udG" firstAttribute="trailing" secondItem="Kud-Qn-oa9" secondAttribute="trailing" id="bgT-4s-Und"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LlZ-es-udG"/>
                     </view>
+                    <connections>
+                        <outlet property="dieSKView" destination="Kud-Qn-oa9" id="Mtc-C4-Pgw"/>
+                        <outlet property="modifierLabel" destination="ENq-ha-Duc" id="ntn-PT-tRc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS5-0c-8Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,7 +314,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-Tb-Br8">
-                                <rect key="frame" x="16" y="80" width="343" height="135"/>
+                                <rect key="frame" x="16" y="36" width="343" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J2W-7y-BnX">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -372,7 +387,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1wT-Td-P2e">
-                                <rect key="frame" x="16" y="225" width="343" height="205"/>
+                                <rect key="frame" x="16" y="181" width="343" height="205"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aoM-30-mLQ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -479,7 +494,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rnp-nT-1zc">
-                                <rect key="frame" x="0.0" y="435" width="375" height="232"/>
+                                <rect key="frame" x="0.0" y="391" width="375" height="276"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewProfficencyCell" id="OK7-d7-yCd" customClass="NewProfficencyCell" customModule="Arcana" customModuleProvider="target">
@@ -503,9 +518,6 @@
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
-                                                            <connections>
-                                                                <action selector="updateSkill:" destination="OK7-d7-yCd" eventType="editingDidEnd" id="xLI-HA-H62"/>
-                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -545,11 +557,7 @@
                         <viewLayoutGuide key="safeArea" id="GMU-la-hOZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add/Edit Character" id="EVZ-F9-xbk">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="HZj-bG-7fb">
-                            <connections>
-                                <segue destination="nb7-kA-Xq8" kind="unwind" identifier="SaveUnwindSegue" unwindAction="unwindWithSegue:" id="jay-lF-b1C"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HZj-bG-7fb"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bonusField" destination="M5V-ee-0Qe" id="7SD-SP-z13"/>
@@ -563,10 +571,10 @@
                         <outlet property="strengthField" destination="Wlm-Ma-y3T" id="a31-rQ-QIv"/>
                         <outlet property="tableView" destination="rnp-nT-1zc" id="JtU-bp-Zbd"/>
                         <outlet property="wisdomField" destination="Tqz-Dn-lMQ" id="9qd-8P-2cx"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SaveUnwindSegue" id="H6S-wH-NRR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA3-kf-qZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="nb7-kA-Xq8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1973.5999999999999" y="619.34032983508246"/>
         </scene>
@@ -589,4 +597,7 @@
             <point key="canvasLocation" x="303" y="132"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="H6S-wH-NRR"/>
+    </inferredMetricsTieBreakers>
 </document>
